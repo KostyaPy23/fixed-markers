@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+html,
+body{ 
+  height: 100%;
+  max-height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.table {
+  border-collapse: collapse;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.table-wrapper {
+  /* height: calc(100vh - 78px); */
+  overflow-x: auto;
+  padding-right: 17px;
+  width: 100%;
+  box-sizing: content-box;
+  padding-bottom: 42px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #000;
+  padding: 5px;
+  min-height: 31px
+}
+
+.table th {
+  min-width: 200px;
+}
+
+.table .error-marker,
+.table .error-marker-first  {
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 0;
+  width: 9px;
+  height: 29px;
+  background-color: red;
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .table .error-marker,
+  .table .error-marker-first  {
+    height: 31px;
+  }
+}
+
+.table .error-marker-first {
+  right: auto;
+  left: 0;
+}
+
+
+/* @-moz-document url-prefix() {
+  .table {
+    position: relative;
+  }
+} */
+
+.table .error .error-marker {
+  display: block;
+}
+
+.table .screen-scrolled .error-marker-first  {
+  display: block;
+}
+
+.table-filters,
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eee;
+  z-index: 99;
+  position: relative;
+}
+
+.table-footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.col-select {
+  display: block;
+  width: 100%;
+}
+
+.pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlighted {
+  background-color: pink;
+  color: #fff;
+}
+
+.pagination li { display: inline-block; }
